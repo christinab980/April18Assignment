@@ -1,3 +1,11 @@
 <header>
-<h1>This is the header</h1>
+<nav class="y-wrap navs-constainer">
+    ${
+        navs.map(nav => `
+        <div id=" "> 
+            <a href="${nav.href}">${nav.name}</a>
+        </div>
+        ).join(' ')
+    }
+</nav>
 </header>

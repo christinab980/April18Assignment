@@ -1,5 +1,6 @@
 const express = require("express");
 es6Renderer = require('express-es6-template-engine');
+const navs = require('./nav.json');
 
 const server = express();
 
@@ -13,11 +14,12 @@ server.set('view engine', 'html')
 server.get('/', (req, res) => {
     res.render('index', {locals: {
         title: "Welcome!",
-        subtitle: "This is where it all begins"
+        activeNew: "/",
+        navs,
     }, 
     partials: {
         header: 'partials/header',
-        main: 'patrials/main',
+        main: 'partials/main',
         footer: 'partials/footer',
     }
 });

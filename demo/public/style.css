@@ -1,8 +1,16 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
+
 header {
     padding: 20px;
     background-color: grey;
