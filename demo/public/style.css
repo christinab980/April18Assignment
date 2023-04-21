@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header {
+    padding: 20px;
+    background-color: grey;
+}
+
+footer {
+    padding: 20px;
+    background-color: grey;
+}
+
+main {
+    flex: 1;
+}

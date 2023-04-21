@@ -4,6 +4,8 @@ es6Renderer = require('express-es6-template-engine');
 const server = express();
 
 server.use(express.json());
+server.use("/", express.static(__dirname + "/public"));
+
 server.engine('html', es6Renderer);
 server.set('views', 'views')
 server.set('view engine', 'html')
@@ -14,9 +16,9 @@ server.get('/', (req, res) => {
         subtitle: "This is where it all begins"
     }, 
     partials: {
-        header: 'header',
-        main: 'main',
-        footer: 'footer'
+        header: 'partials/header',
+        main: 'patrials/main',
+        footer: 'partials/footer',
     }
 });
 });

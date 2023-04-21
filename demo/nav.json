@@ -1,0 +1,22 @@
+[
+    {
+      "href": "/",
+      "isActive": true,
+      "name": "Home"
+    },
+    {
+      "href": "/gallery",
+      "isActive": true,
+      "name": "Gallery"
+    },
+    {
+      "href": "/about",
+      "isActive": true,
+      "name": "About"
+    },
+    {
+      "href": "/contact-us",
+      "isActive": true,
+      "name": "Contact Us"
+    }
+  ]
