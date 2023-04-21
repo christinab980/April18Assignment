@@ -19,16 +19,54 @@ server.get('/', (req, res) => {
     }, 
     partials: {
         header: 'partials/header',
-        main: 'partials/main',
+        main: 'partials/main/landing',
+        footer: 'partials/footer',
+    }
+});
+}); 
+
+server.get('/gallery', (req, res) => {
+    res.render('index', {locals: {
+        title: "Welcome!",
+        activeNew: "/",
+        navs,
+    }, 
+    partials: {
+        header: 'partials/header',
+        main: 'partials/main/gallery',
         footer: 'partials/footer',
     }
 });
 });
 
-server.get('/heartbeat', (req, res) => {
-    console.log('heartbeat', req.heartbeat);
-    res.json({message: 'You are at the /heartbeat'})
-} ) 
+server.get('/about', (req, res) => {
+    res.render('index', {locals: {
+        title: "Welcome!",
+        activeNew: "/",
+        navs,
+    }, 
+    partials: {
+        header: 'partials/header',
+        main: 'partials/main/about',
+        footer: 'partials/footer',
+    }
+});
+});
+
+
+server.get('/contact-us', (req, res) => {
+    res.render('index', {locals: {
+        title: "Welcome!",
+        activeNew: "/",
+        navs,
+    }, 
+    partials: {
+        header: 'partials/header',
+        main: 'partials/main/contactus',
+        footer: 'partials/footer',
+    }
+});
+});
 
 server.listen(8080, () =>
   console.log('The server is running at PORT 8080')
